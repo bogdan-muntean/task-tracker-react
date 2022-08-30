@@ -4,7 +4,7 @@ import React from 'react';
 const App = () => {
   return (
     <div className="container">
-      <Header title={32}/>
+      <Header/>
     </div>
   );
 }
