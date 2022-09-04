@@ -11,7 +11,6 @@ body {
 }
 
 .container{
-  display: flex;
   justify-content: center;
   margin: 30px auto;
   max-width: 500px;
@@ -22,13 +21,18 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  justify-content: space-evenly;
 }
 
 .button{
   width: 60px;
   height: 40px;
   background-color: aquamarine;
+}
+
+.task{
+  margin-bottom: 5px;
+  margin-left: 35%;
 }
