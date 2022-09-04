@@ -26,6 +26,10 @@ const App = () => {
     },
   ])
 
+  //Delete task function
+  
+
+
   return (
     <div className="container">
       <Header/>
