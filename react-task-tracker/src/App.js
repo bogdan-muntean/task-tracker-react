@@ -10,8 +10,8 @@ const App = () => {
 
   const [tasks, setTasks] = useState([])
 
+  //getdata and setTasks
   useEffect(() => {
-    //getdata and setTasks
       const getTasks = async () => {
         const fetchData = await fetchTasks()
         setTasks(fetchData)
