@@ -4,9 +4,9 @@ import Button from './Button'
 
 // const Header = (props) => {
 const Header = ({ title, onAdd, showAdd }) => {
-    const onClick = () => {
-        console.log("button was clicked")
-    }
+    // const onClick = () => {
+    //     console.log("button was clicked")
+    // }
 
     return (
     <header className='header'>
