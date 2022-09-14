@@ -10,7 +10,16 @@ const App = () => {
 
   const [tasks, setTasks] = useState([])
 
-  //getdata and setTasks
+  //Fetch task
+  const fetchTasks = async() => {
+    const res = await fetch('http://localhost:5000/tasks')
+    const data = await res.json()
+  
+    console.log(data)
+    return data
+  }
+
+  //getData and setTasks
   useEffect(() => {
       const getTasks = async () => {
         const fetchData = await fetchTasks()
@@ -18,15 +27,6 @@ const App = () => {
       }
       getTasks()
     } , [])
-
-  //Fetch task
-  const fetchTasks = async() => {
-    const res = await fetch('http://localhost:5000/tasks')
-    const data = await res.json()
-
-    console.log(data)
-    return data
-  }
 
   //Add task function
   const addTask = async (task) => {
@@ -41,6 +41,7 @@ const App = () => {
     const data = await res.json()
     setTasks([...tasks, data])
   }
+      //For randomize of id number
       // const id = Math.floor(Math.random() * 100) + 1
       // const newTask = {id , ...task}
       // setTasks([...tasks, newTask])
@@ -55,10 +56,25 @@ const App = () => {
     setTasks(tasks.filter((task) => task.id !== id))
   }
 
-  //Toggle task function
-  const toggleReminder = (id) => {
+  //Toggle task function and setTasks
+  const toggleReminder = async (id) => {
+    const res1 = await fetch(`http://localhost:5000/tasks/${id}`)
+    const taskToToggle = await res1.json()
+
+    const updateTask = {...taskToToggle, reminder: !taskToToggle.reminder}
+
+    const res2 = await fetch(`http://localhost:5000/tasks/${id}`,{
+      method: 'PUT',
+      headers: {
+        'Content-type' : 'application/json',
+      },
+      body: JSON.stringify(updateTask)
+    })
+    const data = await res2.json()
+    
+        //setTasks remains to make changes without refresh page
     setTasks(tasks.map((task) =>  
-        task.id === id ? {...task, reminder: !task.reminder} : task 
+        task.id === id ? {...task, reminder: data.reminder} : task 
     ))
   }
 
