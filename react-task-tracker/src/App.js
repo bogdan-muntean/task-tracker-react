@@ -3,7 +3,8 @@ import Header from './Header';
 import Tasks from './Tasks';
 import { useState, useEffect } from 'react';
 import AddTask from './AddTask';
-
+import Footer from './Footer';
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   const [toggleAddTask, setToggleAddTask] = useState(false)
@@ -84,10 +85,12 @@ const App = () => {
         onAdd={() => { setToggleAddTask( !toggleAddTask ) }}
         showAdd={ toggleAddTask }/>
       {toggleAddTask && <AddTask onAdd={addTask}/>}
-      {tasks.length > 0 ? (
-        <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>) 
-        : ('No tasks')
-      }
+        {tasks.length > 0 ? (
+          <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>) 
+          : ('No tasks')
+        }
+      {/* <Outlet></Outlet> */}
+      <Footer/>
     </div>
   );
 }
