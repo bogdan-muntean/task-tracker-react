@@ -9,7 +9,7 @@
     {
       "text": "Edit project",
       "day": "Feb 8th at 5pm",
-      "reminder": false,
+      "reminder": true,
       "id": 2
     },
     {

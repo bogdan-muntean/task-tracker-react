@@ -4,7 +4,7 @@ import Tasks from './Tasks';
 import { useState, useEffect } from 'react';
 import AddTask from './AddTask';
 import Footer from './Footer';
-import { Outlet } from 'react-router-dom';
+// import { Outlet } from 'react-router-dom';
 
 const App = () => {
   const [toggleAddTask, setToggleAddTask] = useState(false)

@@ -13,7 +13,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       {/* We add route with path='/' to introduce index here. This will render only about for path='/about' */}
-      <Route path='/' element={<App/>}/>
+      <Route path='/*' element={<App/>}/>
       <Route path='/about' element={<About/>}/>
     </Routes>
   </BrowserRouter>

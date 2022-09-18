@@ -1,6 +1,6 @@
 {
-  "homepage": "http://bogdan-muntean.github.io/react-task-tracker",
-  "name": "react-task-tracker",
+  "homepage": "http://bogdan-muntean.github.io/task-tracker-react",
+  "name": "task-tracker-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -18,7 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md src webroot package.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
