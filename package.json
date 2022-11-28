@@ -1,5 +1,5 @@
 {
-  "homepage": "http://bogdan-muntean.github.io/task-tracker-react",
+  "homepage": "https://bogdan-muntean.github.io/task-tracker-react/",
   "name": "task-tracker-react",
   "version": "0.1.0",
   "private": true,
@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000"
+    "server": "npx json-server --watch public/db.json --port=5000"
   },
   "eslintConfig": {
     "extends": [
