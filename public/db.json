@@ -9,14 +9,20 @@
     {
       "text": "Edit project",
       "day": "Feb 8th at 5pm",
-      "reminder": true,
+      "reminder": false,
       "id": 2
     },
     {
       "text": "Go to the gym",
       "day": "Feb 10th at 6:20pm",
-      "reminder": false,
+      "reminder": true,
       "id": 3
+    },
+    {
+      "text": "hhh",
+      "day": "5 feb",
+      "reminder": false,
+      "id": 4
     }
   ]
 }

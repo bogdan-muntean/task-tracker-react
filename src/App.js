@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './Header';
-import Tasks from './Tasks';
+import Header from './Components/Header';
+import Tasks from './Components/Tasks';
 import { useState, useEffect } from 'react';
-import AddTask from './AddTask';
-import Footer from './Footer';
+import AddTask from './Functions/AddTask';
+import Footer from './Components/Footer';
 // import { Outlet } from 'react-router-dom';
 
 const App = () => {
